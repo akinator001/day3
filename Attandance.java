@@ -12,19 +12,25 @@ public class Attandance {
 		int empHrs = 0 ;
 		int empWages = 0 ;
 		
-		int empCheck = (int)Math.floor(Math.random() * 10) % 3;
-		
-		switch(empCheck){
-			case 2:
-				empHrs = 4 ;
-				break;
-			case 1:
-				empHrs = 8 ;
-				break;
-			default:
-				empHrs = 0;
-		}
-		empWages = empHrs * EMP_RATE ;
-		System.out.println("Emp Wages :" + empWages);
+		int totalWages = 0 ; 
+		int day = 20 ;
+		while(day-- > 0) {
+			int empCheck = (int)Math.floor(Math.random() * 10) % 3;
+			
+			switch(empCheck){
+				case 2:
+					empHrs = 4 ;
+					break;
+				case 1:
+					empHrs = 8 ;
+					break;
+				default:
+					empHrs = 0;
+			}
+			empWages = empHrs * EMP_RATE ;
+			totalWages += empWages ;
+			System.out.println("Emp Wages :" + empWages);
+		}	
+		System.out.println("Total wages :"+ totalWages);
 	}
 }
