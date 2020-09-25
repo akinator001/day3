@@ -1,21 +1,19 @@
 
 public class Attandance {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-			
-		
+	public static void computeEmpWage(String company, int EMP_RATE , int numOfWorkingDays ,int maxHoursPerMonth) {
+
 		int IS_FULL_TIME = 1 ;
 		int IS_PART_TIME = 2 ;
 		
-		int EMP_RATE = 20 ;
+		
 		int empHrs = 0 ;
 		int empWages = 0 ;
 		
 		int totalWages = 0 ;  
 		int totalEmpHrs = 0 ;
 		int day = 0 ;
-		while(day < 20 && totalEmpHrs <=100){
+		while(day < numOfWorkingDays  && totalEmpHrs <= maxHoursPerMonth){
 			day++;
 			int empCheck = (int)Math.floor(Math.random() * 10) % 3;
 			
@@ -34,7 +32,11 @@ public class Attandance {
 			totalWages += empWages ;
 			System.out.println("Day :" + day +"     Emp Hrs :"+ empHrs);
 		}	
-//		totalWages = totalEmpHrs * EMP_RATE;
-		System.out.println("Total wages :"+ totalWages);
+		System.out.println("Total Emp wage for company : "+company+" is :"+ totalWages);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			computeEmpWage("mart",20,20,100);
+			computeEmpWage("akin",40,10,50);
 	}
 }
