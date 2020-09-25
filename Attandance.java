@@ -1,10 +1,8 @@
 
 public class Attandance {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-			
-		
+	public static void computeEmpWage() {
+
 		int IS_FULL_TIME = 1 ;
 		int IS_PART_TIME = 2 ;
 		
@@ -34,7 +32,10 @@ public class Attandance {
 			totalWages += empWages ;
 			System.out.println("Day :" + day +"     Emp Hrs :"+ empHrs);
 		}	
-//		totalWages = totalEmpHrs * EMP_RATE;
 		System.out.println("Total wages :"+ totalWages);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			computeEmpWage();
 	}
 }
