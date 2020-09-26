@@ -1,7 +1,19 @@
 
 public class Attandance {
-
-	public static void computeEmpWage(String company, int EMP_RATE , int numOfWorkingDays ,int maxHoursPerMonth) {
+		
+	static String company ;
+	static int EMP_RATE ;
+	static int numOfWorkingDays ;
+	static int maxHoursPerMonth;
+	
+	Attandance(String company ,	int EMP_RATE , int numOfWorkingDays ,int maxHoursPerMonth){
+		this.company = company ;
+		this.EMP_RATE = EMP_RATE ;
+		this.numOfWorkingDays = numOfWorkingDays ;
+		this.maxHoursPerMonth = maxHoursPerMonth ;
+	}
+	
+	public static void computeEmpWage() {
 
 		int IS_FULL_TIME = 1 ;
 		int IS_PART_TIME = 2 ;
@@ -34,9 +46,10 @@ public class Attandance {
 		}	
 		System.out.println("Total Emp wage for company : "+company+" is :"+ totalWages);
 	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			computeEmpWage("mart",20,20,100);
-			computeEmpWage("akin",40,10,50);
+			Attandance akin = new Attandance("akin",20,50,100);
+			akin.computeEmpWage();
 	}
 }
